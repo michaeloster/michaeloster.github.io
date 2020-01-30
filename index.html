@@ -1,6 +1,39 @@
 <html>
-<header><title>This is title</title></header>
+<header><title>Apptimize Results Generator</title></header>
 <body>
-Hello world
+<script src="include/apptimize-js-client-1.2.12.bundle.min.js">
+
+
+// Create a function that will be executed whenever new Apptimize metadata is downloaded
+function onApptimizeInitialized(){
+    console.log("Apptimize setup and initialization complete");
+    Apptimize.track("Apptimize Initialized");
+    // Set a flag to indicate Apptimize data is available and content can be displayed
+}
+
+
+Apptimize.setOnApptimizeInitializedCallback(onApptimizeInitialized);
+Apptimize.setup("BmvdwCmjhc6TUwheuyAmfGkLRekeFc4");
+
+</script>
+
+
+
+
+
+Here is some text
+
+         <h2>JavaScript in Body</h2> 
+         <p id="demo">geeksforgeeks.</p> 
+         <button type="button" onclick="gfg()">Try it</button> 
+         <script> 
+            function gfg() { 
+              document.getElementById("demo").innerHTML = Apptimize.getApptimizeSDKVersion(); 
+            } 
+         </script> 
+
+
 </body>
+
+
 </html>
